@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body>
+
+    <% data.forEach(item =>{ %>
+    <div class="master">
+    <div class="card">
+        <img src="<%= item.image %>" alt="">
+        <div class="container">
+        <h2><%= item.title %></h2>
+        <h4><%= item.author %></h4>
+        <p><%= item.description %></p>
+    </div>
+    </div>
+    </div>
+    <% })%>
+ 
+
+</body>
+
+</html>
