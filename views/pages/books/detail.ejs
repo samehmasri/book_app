@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <h1>Best Books!</h1>
+    <div class="rightdiv" style="width: 100%; ">
+    <div class="topnav" id="myTopnav"  >
+        <a href="#news" style="display: none;"></a>
+        <a href="/" class="margintop20">Home</a>
+        <a href="/searches/new">Search The Google Books API</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+      
+
+</header>
+<div class="underheader">
+  <h1>Book Details</h1>
+</div>
+  
+    <div class="detailbook" >
+        <img src="<%= bookDetails.image_url %>" alt="">
+        <h2><%= bookDetails.title %></h2>
+        <h4><%= bookDetails.author %></h4>
+
+        <p><%= bookDetails.description %></p>
+        <h4><%= bookDetails.isbn %></h4>
+      </div>
+      
+    <script src="../app.js"></script>
+
+</body>
+
+</html>
