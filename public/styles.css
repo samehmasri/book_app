@@ -1,36 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
 body{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  background-color: #9B9B9B;
+  justify-content: center;
+  font-family: 'Nunito', sans-serif;
+  margin-top:-8px ;
 }
+.showhandler{
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .master{
-  width: 400px;
+  width: 350px;
   height: 500px;
   overflow: hidden;
   margin-right:20px ;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
 
 }
 .card {
   padding-top: 20px;
-  background-color: rgb(197, 110, 110);
+  background-color: #D8D8D8;
   align-items: center;
   align-content: center;
   text-align: center;
   /* Add shadows to create the "card" effect */
   flex-wrap: wrap;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 140px 180px 0 rgba(0, 0, 0, 0.349);
   transition: 0.3s;
-  width: 400px;
+  width: 350px;
   height: 500px;
-  margin: 20px 50px;
   overflow:scroll;
   padding-right: 20px;
 }
 
 /* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.master:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.493);
 }
 
 /* Add some padding inside the card container */
@@ -42,18 +64,271 @@ img{
 }
 .container2{
   background-color: brown;
-  position: relative;
-  margin-top: 200px;
-  left: 40%;
+  position: fixed;
   top: 50%;
-  width: 300px;
-  height: 300px;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
   
 }
 
 .child2 {
- position: absolute;
- left: 50%;
- top: 50%;
-   margin: -50px 0 0 -70px; /* apply negative top and left margins to truly center the element */
+position: absolute;
+background-color: brown;
+padding: 20px;
+text-align: center;
+border-radius: 5%; 
+margin: -100px 0 0 -100px; /* apply negative top and left margins to truly center the element */
+}
+.card h2{
+  color: #EEEEEE;
+  text-shadow: 2px 2px 3px #000000;
+}
+.card h4{
+  color: #676767;
+  font-style: italic;
+  width: 80%;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.card p{
+  color: #676767;
+  font-size:20px;
+  width: 80%;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+header{
+  display: flex;
+  width: 100%;
+  background-color: black;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header h1{
+  color: white;
+  font-weight: bold;
+  font-size:40px;
+  margin: 10px 20px;
+  justify-content: left;
+  z-index: 3;
+
+}
+header .rightdiv{
+  position: absolute;
+  right: 0;
+
+}
+.underheader{
+  width: 100%;
+  background-color:  #4A4A4A
+  ;
+}
+.underheader h1{
+  color: white;
+  font-weight: bold;
+  font-size:20px;
+  margin: 10px 20px;
+}
+.formhandler{
+  padding: 20px;
+  margin-top: 5%;
+  
+}
+.formhandler input {
+  width: 196.5px;
+  height: 30px;
+
+}
+.check1{
+  display: flex;
+  margin: 20px 0;
+  background-color: #D8D8D8;
+  color: black;
+  font-weight: bold;
+}
+.check1 input{
+  display: inline-block;
+  width: 10%;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+  
+}
+.check1 input:checked {
+  background-color: black;
+}
+.check1 label{
+  padding: 7px 0;
+  justify-content: left;
+  display: inline-block;
+  width: 60px;
+}
+.buttonForm input{
+  border: none;
+  width: 100%;
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+
+}
+.buttonForm input:hover{
+  border: none;
+  width: 100%;
+  background-color: white;
+  color: black;
+}
+::placeholder {
+  font-weight: 200em;
+
+  color: black;
+  font-size: 1.2em;
+}
+
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.507);
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+
+}
+
+.topnav a:hover {
+  background-color: rgba(221, 221, 221, 0.822);
+  color: black;
+  font-weight: bold;
+
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 12000px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 12000px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 0px;
+  }
+  .topnav.responsive a {
+    
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}
+.margintop20{
+  margin-top: 45px;
+}
+
+
+.buttonBook{
+  width: 100%;
+  margin-left: 10px;
+  height: 50px;
+  font-size: 3ex;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border: none;
+  margin-top: 15%;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+.buttonBook:hover{
+
+  background-color: #9B9B9B;
+  color: black;
+  border: none;
+}
+
+
+.buttondetals{
+  display: block;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  font: bold 20px Arial;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 15px 0px;
+ 
+}
+.buttondetals:hover{
+
+  font: bold 20px Arial;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  padding: 15px 0px;
+  
+}
+
+.detailbook{
+  padding-top: 20px;
+  background-color: #D8D8D8;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 140px 180px 0 rgba(0, 0, 0, 0.349);
+  transition: 0.3s;
+  width: 80%;
+  margin-top: 5%;
+}
+.detailbook h2{
+  color: #EEEEEE;
+  text-shadow: 2px 2px 3px #000000;
+}
+.detailbook h4{
+  color: #676767;
+  font-style: italic;
+  width: 80%;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.detailbook p{
+  background-color: #EEEEEE ;
+  padding: 10px 20px;
+  color: black;
+  font-size:15px;
+  width: 80%;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
 }

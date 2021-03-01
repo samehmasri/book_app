@@ -5,13 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="../styles.css">
+
 </head>
 
 <body>
-    <p>
-        Hello
-    </p>
+
+    <header>
+        <h1>Best Books!</h1>
+        <div class="rightdiv" style="width: 100%; ">
+        <div class="topnav" id="myTopnav"  >
+            <a href="#news" style="display: none;"></a>
+            <a href="/" class="margintop20">Home</a>
+            <a href="/">Search The Google Books API</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </div>
+
+    
+    </header>
+    <button><a href="/searches/new">Hello world</a></button>
+    <% booksArr.forEach(item =>{ %>
+    <div>
+        <img src="<%= item.image_url %>" alt="">
+        <h2><%= item.title %></h2>
+        <h3><%= item.author %></h3>
+        <h3><%= item.isbn %></h3>
+        <p><%= item.description %></p>
+    </div>
+    <% })%>
 
 </body>
 

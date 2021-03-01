@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Best Books!</h1>
+        <div class="rightdiv" style="width: 100%; ">
+        <div class="topnav" id="myTopnav"  >
+            <a href="#news" style="display: none;"></a>
+            <a href="/" class="margintop20">Home</a>
+            <a href="/searches/new">Search The Google Books API</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </div>
+
+    
+    </header>
+    <div class="underheader">
+        <h1>Saved Books</h1>
+    </div>
+    <div class="showhandler">
+
+    <% booksArr.forEach(item =>{ %>
+        <div class="master">
+        <div class="card">
+        <img src="<%= item.image_url %>" alt="">
+        <h2 style="margin-bottom: 20px;"><%= item.title %></h2>
+
+        <a href="/getBook/<%= item.id %>" class="buttondetals">View Details</a>
+    </div>
+</div>
+    <% })%>
+
+</div>
+    <script src="../app.js"></script>
+
+</body>
+
+</html>
+
