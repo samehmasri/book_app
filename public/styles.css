@@ -156,7 +156,7 @@ header .rightdiv{
     height: 1.3em;
     background-color: white;
     border-radius: 50%;
-    border: 1px solid #ddd;
+    border: 1px solid rgb(139, 120, 6);
     -webkit-appearance: none;
     outline: none;
     cursor: pointer;
@@ -265,12 +265,14 @@ header .rightdiv{
   margin-top: 15%;
   margin-bottom: 20px;
   transition: 0.5s;
+  border: 1px solid black;
 }
 .buttonBook:hover{
-
-  background-color: #9B9B9B;
-  color: black;
   border: none;
+  border: 1px solid black;
+
+  background-color: white;
+  color: black;
 }
 
 
@@ -285,7 +287,8 @@ header .rightdiv{
   background-color: black;
   color: white;
   padding: 15px 0px;
- 
+  border: 1px solid black;
+ transition: 0.5s;
 }
 .buttondetals:hover{
 
@@ -294,7 +297,8 @@ header .rightdiv{
   background-color: white;
   color: black;
   padding: 15px 0px;
-  
+  border: 1px solid black;
+
 }
 
 .detailbook{
@@ -331,4 +335,43 @@ header .rightdiv{
   font-weight: bold;
   margin-left: auto;
   margin-right: auto;
+}
+
+.detailbookbutton{
+  background-color: black;
+  color:white;
+  font-weight: bold;
+  border: none;
+  padding: 15px 30px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: solid 1px black;
+
+  transition: 0.5s;
+
+}
+.detailbookbutton:hover{
+  background-color: white;
+  color:black;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding: 15px 30px;
+
+  border: solid 1px black;
+}
+
+.sectionform{
+  background-color: #9B9B9B;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.sectionform form{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }

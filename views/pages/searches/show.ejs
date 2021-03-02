@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Search Results</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="https://library.kissclipart.com/20180830/ccq/kissclipart-books-icon-png-clipart-computer-icons-book-fa5d85a91f8ea2cc.png">
 
 </head>
 
@@ -38,18 +39,18 @@
     <div class="master">
     <div class="card">
         <img src="<%= item.image_url  %>" alt="">
-        <div class="container">
+        <div class="container" style="min-height: 450px; position: relative;">
         <h2><%= item.title %></h2>
         <h4><%= item.author %></h4>
         <h4><%= item.isbn %></h4>
-        <p><%= item.description %></p>
+        <p style="margin-bottom: 100px;"><%= item.description %></p>
         <form action="/addBook" method="POST">
             <input type="hidden" name="image_url" value="<%= item.image_url %>">
             <input type="hidden" name="title" value="<%= item.title %>">
             <input type="hidden" name="author" id="title" value="<%= item.author %>">
             <input type="hidden" name="isbn" id='author' value="<%= item.isbn %>">
             <input type="hidden" name="description" id='author' value="<%= item.description %>">
-            <input type="submit" value="Select this Book" class="buttonBook">
+            <input type="submit" value="Select this Book" class="buttonBook" style="position: absolute; bottom: 20px; right: -3%;">
         </form>
     </div>
     </div>
