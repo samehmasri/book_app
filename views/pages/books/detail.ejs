@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>Book Details</title>
+    <link rel="shortcut icon" href="https://library.kissclipart.com/20180830/ccq/kissclipart-books-icon-png-clipart-computer-icons-book-fa5d85a91f8ea2cc.png">
+
 </head>
 
 <body>
@@ -38,9 +40,26 @@
 
         <p><%= bookDetails.description %></p>
         <h4><%= bookDetails.isbn %></h4>
+        <form action="/deleteBook/<%= bookDetails.id %>?_method=delete" method="post">
+          <button class="detailbookbutton">Delete Book</button>
+        </form>
+        <button class="detailbookbutton" id="updateBtn">Update Form</button>
+      <section  class="sectionform" id="updateForm">
+        <h2>Update Book</h2>
+        <!-- localhost:3000/updateTask/4?_method=put -->
+        <!-- /updateTask/:taskID -->
+        <form action="/updateBook/<%= bookDetails.id %>?_method=put" method="POST">
+          <input type="text" name="title" value="<%= bookDetails.title  %>" style="margin: 20px 0; height: 30px;" >
+          <input type="text" name="author" value="<%= bookDetails.author %>" style="margin: 20px 0;  height: 30px;">
+          <textarea name="description" cols="30" rows="10" style="margin: 20px 0;"><%= bookDetails.description%> </textarea>
+          <input type="text" name="isbn" value="<%= bookDetails.isbn  %>" style="margin: 20px 0;  height: 30px;">
+          <button class="detailbookbutton" style="width: 40%; margin-left: auto; margin-right: auto;">Update Book</button>
+        </form>
+      </section>
       </div>
-      
-    <script src="../app.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="../app2.js"></script>
 
 </body>
 
